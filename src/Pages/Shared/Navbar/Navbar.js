@@ -72,20 +72,10 @@ const Navbar = () => {
           {
             user?
               <div>
-                <li className="">
-                <Link to="/">
-              <a className="">My Reviews</a>
-            </Link>
-                </li>
-                <li className=" ">
-                  <Link to="/">
-                    <a>Add Service</a>
-                  </Link>
-                </li>
-                <li className="textDesign">
+                <li className="text-primary text-xl font-semibold hover:text-secondary ">
                   <a onClick={handleLogout}>Logout</a>
                 </li>
-                <p className="text-center ">{user.displayName}</p>
+                <p className="text-center ">{user?.displayName}</p>
               </div>
              : 
             <a className="btn btn-secondary font-bold"><Link to="/login">Login</Link></a>
