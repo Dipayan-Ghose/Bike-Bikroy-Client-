@@ -7,7 +7,7 @@ const LoadCategory = ({ data }) => {
   console.log(data.models);
   return (
     <div>
-      <div className="card card-compact w-64 bg-base-100 shadow-2xl mx-auto">
+      <div className="card card-compact w-64 bg-base-100 shadow-xl mx-auto">
         <figure>
           <img className="w-36 mt-3 p-0" src={brand_img} alt="" />
         </figure>

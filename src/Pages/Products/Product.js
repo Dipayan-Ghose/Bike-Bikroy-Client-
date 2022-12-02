@@ -15,11 +15,11 @@ const Product = ({ bike }) => {
   } = bike;
   console.log(bike.models);
   return (
-    <div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2">
         {model.map(info=>
-        <div className="card lg:card-side bg-base-100 shadow-xl">
+        <div className="card lg:card-side bg-base-100 shadow-xl m-4">
         <figure>
-          <img src={info.image} alt="img" />
+          <img className="w-60" src={info.image} alt="img" />
         </figure>
         <div className="card-body">
           <h2 className="text-blue-700 font-bold text-xl">{info.name}</h2>

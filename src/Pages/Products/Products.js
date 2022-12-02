@@ -8,7 +8,7 @@ const Products = () => {
     // console.log(products)
  
   return (
-    <div className="max-w-[1200px] my-5 gap-6 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 mx-auto">
+    <div className="max-w-[1300px] my-5 gap-6  mx-auto">
       {products.map((bike) => (
         <Product
         key={bike._id}

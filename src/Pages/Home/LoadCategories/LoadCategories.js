@@ -12,7 +12,7 @@ const LoadCategories = () => {
         .catch(err=> console.log(err))
     },[]);
     return (
-        <div className='max-w-[600px] my-8 gap-6 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 mx-auto'>
+        <div className='max-w-[550px] my-8 gap-7 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 mx-auto'>
             {loadData.map((data,i)=><LoadCategory
             key={i}
             data={data}
