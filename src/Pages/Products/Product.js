@@ -31,7 +31,7 @@ const Product = ({ bike }) => {
           <p className="text-green-600 text-lg font-semibold">Selling Price: {info.resale_price} Tk</p>
 
           <div className="card-actions justify-center">
-            <button className="btn btn-primary ">Buy Now</button>
+            <button className="btn btn-primary ">Book Now</button>
         </div>
        </div>
       </div>    
