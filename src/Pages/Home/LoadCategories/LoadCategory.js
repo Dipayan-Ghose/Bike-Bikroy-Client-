@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const LoadCategory = ({ data }) => {
   const { _id, brand, brand_img } = data;
-  console.log(data.brand);
+  
+  console.log(data.models);
   return (
     <div>
       <div className="card card-compact w-64 bg-base-100 shadow-2xl mx-auto">
@@ -13,7 +15,7 @@ const LoadCategory = ({ data }) => {
           <h2 className="text-2xl text-blue-700 font-bold text-center">{brand}</h2>
           <div className="card-actions justify-end">
             <button className="btn btn-primary ">
-              View Models
+             <Link to={`category/${_id}`}> View Models</Link>
             </button>
           </div>
         </div>
