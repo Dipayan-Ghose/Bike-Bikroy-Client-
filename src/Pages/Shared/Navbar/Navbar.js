@@ -29,6 +29,7 @@ const Navbar = () => {
       <li className='text-primary text-xl font-semibold hover:bg-secondary hover:text-neutral hover:rounded'>
         <Link to="/"></Link>
       </li>
+    
       <li className='text-primary text-xl font-semibold hover:bg-secondary hover:text-neutral hover:rounded'>
         <Link to="/"></Link>
       </li>
@@ -64,6 +65,12 @@ const Navbar = () => {
             </ul>
           </div>
           <a className="btn border border-2 normal-case text-primary text-xl">Bike Bikroy</a>
+          {
+        user?
+        <p className="text-primary ">Hello, {user?.displayName}</p>
+        :
+        null
+      }
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">{menu}</ul>
@@ -72,10 +79,10 @@ const Navbar = () => {
           {
             user?
               <div>
-                <li className="text-primary text-xl font-semibold hover:text-secondary ">
+                <li className="btn btn-secondary font-bold">
                   <a onClick={handleLogout}>Logout</a>
                 </li>
-                <p className="text-center ">{user?.displayName}</p>
+                
               </div>
              : 
             <a className="btn btn-secondary font-bold"><Link to="/login">Login</Link></a>
