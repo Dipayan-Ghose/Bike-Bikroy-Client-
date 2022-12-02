@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const menu = (
     <React.Fragment >
-      <li className='text-primary text-xl font-semibold'>
+      <li className='text-primary text-xl font-semibold hover:bg-secondary hover:text-neutral hover:rounded'>
         <Link to="/">Home</Link>
       </li>
-      <li className='text-primary text-xl font-semibold'>
+      <li className='text-primary text-xl font-semibold hover:bg-secondary hover:text-neutral hover:rounded'>
         <Link to="/">Categories</Link>
       </li>
-      <li className='text-primary text-xl font-semibold'>
+      <li className='text-primary text-xl font-semibold hover:bg-secondary hover:text-neutral hover:rounded'>
         <Link to="/"></Link>
       </li>
-      <li className='text-primary text-xl font-semibold'>
+      <li className='text-primary text-xl font-semibold hover:bg-secondary hover:text-neutral hover:rounded'>
         <Link to="/"></Link>
       </li>
     </React.Fragment>
@@ -47,7 +47,7 @@ const Navbar = () => {
               {menu}
             </ul>
           </div>
-          <a className="btn btn-outline border-2 normal-case text-primary text-xl">Bike Bikroy</a>
+          <a className="btn border border-2 normal-case text-primary text-xl">Bike Bikroy</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">{menu}</ul>
