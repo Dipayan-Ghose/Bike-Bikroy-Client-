@@ -1,7 +1,23 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import toast from "react-hot-toast";
+import { Link, useNavigate } from "react-router-dom";
+import { authContext } from "../../../Authentication/Auth/Auth";
 
 const Navbar = () => {
+  const {user,Logout}= useContext(authContext)
+
+  const navigate= useNavigate();
+
+  const handleLogout = () => {
+    Logout()
+      .then(() => {
+        toast.error('Logging Out', {position: "top-center",
+        autoClose: 1500});
+        navigate('/');
+      })
+      .catch((err) => console.error(err));
+  };
+
   const menu = (
     <React.Fragment >
       <li className='text-primary text-xl font-semibold hover:bg-secondary hover:text-neutral hover:rounded'>
@@ -53,7 +69,28 @@ const Navbar = () => {
           <ul className="menu menu-horizontal p-0">{menu}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn btn-secondary font-bold">Login</a>
+          {
+            user?
+              <div>
+                <li className="">
+                <Link to="/">
+              <a className="">My Reviews</a>
+            </Link>
+                </li>
+                <li className=" ">
+                  <Link to="/">
+                    <a>Add Service</a>
+                  </Link>
+                </li>
+                <li className="textDesign">
+                  <a onClick={handleLogout}>Logout</a>
+                </li>
+                <p className="text-center ">{user.displayName}</p>
+              </div>
+             : 
+            <a className="btn btn-secondary font-bold"><Link to="/login">Login</Link></a>
+          }
+          
         </div>
       </div>
     </div>
